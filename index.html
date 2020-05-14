@@ -51,6 +51,9 @@
           }))
           .addControl(new mapboxgl.NavigationControl({
             showCompass: false
+          }))
+          .addControl(new mapboxgl.ScaleControl({
+            position: "bottom-left"
           }));
         map.on("load", function() {
           let attribution = d3.select(".mapboxgl-ctrl-attrib-inner");
