@@ -52,6 +52,10 @@
           .addControl(new mapboxgl.NavigationControl({
             showCompass: false
           }));
+        map.on("load", function() {
+          let attribution = d3.select(".mapboxgl-ctrl-attrib-inner");
+          attribution.html("&copy; ACT Government | " + attribution.html());
+        });
         // svg layer
         container = map.getCanvasContainer();
         svg = d3.select(container)
