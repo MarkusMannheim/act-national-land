@@ -57,7 +57,8 @@
               position: "bottom-left"
             }));
           let attribution = d3.select(".mapboxgl-ctrl-attrib-inner");
-          attribution.html("&copy; ACT Government | " + attribution.html());          
+          attribution.html("&copy; ACT Government | " + attribution.html());
+          attribution.html(attribution.html().slice(0, -250);
         });
         // svg layer
         container = map.getCanvasContainer();
